@@ -1,0 +1,6 @@
+export const serviceAreas = [
+  { slug: "manassas-va", name: "Manassas, VA", title: "HVAC Services in Manassas, VA", description: "Local heating, cooling, water heater, and duct service for Manassas homeowners, businesses, and apartment communities.", neighborhoods: ["Manassas Park", "Sudley", "Bull Run", "Yorkshire", "Bristow", "Gainesville"] },
+  { slug: "northern-virginia", name: "Northern Virginia", title: "HVAC Services Across Northern Virginia", description: "Responsive residential, commercial, and multifamily HVAC service across Prince William, Fairfax, Arlington, and nearby communities.", neighborhoods: ["Manassas", "Arlington", "Alexandria", "Fairfax", "Centreville", "Herndon"] },
+  { slug: "washington-dc", name: "Washington, DC", title: "HVAC Services in Washington, DC", description: "Professional HVAC repair, installation, and property support for homes, businesses, and managed communities in Washington, DC.", neighborhoods: ["Gallery Place", "Downtown", "Northwest DC", "Northeast DC", "Southwest DC", "Southeast DC"] },
+];
+export const areaBySlug = Object.fromEntries(serviceAreas.map((area) => [area.slug, area]));

@@ -1,0 +1,6 @@
+import Link from "next/link";
+import Image from "next/image";
+import { serviceAreas } from "@/data/serviceAreas";
+import { services } from "@/data/services";
+import { images, site } from "@/data/site";
+export function SiteFooter() { return <footer className="footer"><div className="container footer-grid"><div><div className="footer-logo"><Image src={images.logoRectangle} alt="Hot & Cool Services" width={230} height={74}/></div><p>Reliable heating, cooling, water heater, and duct services for homes, businesses, and managed properties.</p><a className="footer-phone" href={site.phoneHref}>{site.phone}</a></div><div><h3>Services</h3>{services.slice(0,6).map(s=><Link key={s.slug} href={`/services/${s.slug}`}>{s.title}</Link>)}</div><div><h3>Service Areas</h3>{serviceAreas.map(a=><Link key={a.slug} href={`/service-areas/${a.slug}`}>{a.name}</Link>)}<Link href="/projects">Commercial Projects</Link></div><div><h3>Contact</h3><p>{site.address}</p><p>{site.region}</p><Link href="/contact">Request service online</Link></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Hot & Cool Services. All rights reserved.</span><span>Licensed and insured HVAC service</span></div></footer> }

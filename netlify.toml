@@ -1,0 +1,33 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/2026/06/25/5-signs-you-need-ac-repair-in-manassas-va-hot-cool-services/"
+  to = "/blog/5-signs-you-need-ac-repair-in-manassas-va"
+  status = 301
+
+[[redirects]]
+  from = "/2026/06/15/7-hvac-tips-for-home-owners-this-summer/"
+  to = "/blog/7-hvac-tips-for-homeowners-this-summer"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/commercial-hvac-Manassas-VA"
+  to = "/services/commercial-hvac"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
