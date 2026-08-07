@@ -2,7 +2,34 @@ const transform = "f_auto,q_auto,w_1200,h_800,c_fill,g_auto";
 const cloudinary = (version: string, publicId: string) =>
   `https://res.cloudinary.com/kw3mrd3f/image/upload/${transform}/${version}/${publicId}.jpg`;
 
-export const projects = [
+export type Project = {
+  name: string;
+  location: string;
+  type: string;
+  description: string;
+  images: string[];
+  management?: {
+    name: string;
+    url: string;
+  };
+};
+
+export const projects: Project[] = [
+  {
+    name: "Parkside Landing",
+    location: "Rockville, MD",
+    type: "Managed Property HVAC",
+    description: "HVAC and property-service support for a Rockville apartment community managed by Grady Management.",
+    management: {
+      name: "Grady Management",
+      url: "https://www.gradymgt.com/mdparksidelanding",
+    },
+    images: [
+      "https://res.cloudinary.com/kw3mrd3f/image/upload/f_auto,q_auto,w_1200,h_800,c_fill,g_auto/v1786063923/933dac_689ac0e2eac347b1bbb2c8ad7961f937_mv2_qjrdfg.avif",
+      "https://res.cloudinary.com/kw3mrd3f/image/upload/f_auto,q_auto,w_1200,h_800,c_fill,g_auto/v1786064057/Parkside_Landing_hdk74v.webp",
+      "https://res.cloudinary.com/kw3mrd3f/image/upload/f_auto,q_auto,w_1200,h_800,c_fill,g_auto/v1786063923/933dac_0c70e0cc2f0d4e4fb60010f130e62c23_mv2_xheqsm.avif",
+    ],
+  },
   {
     name: "Meridian at Gallery Place",
     location: "Washington, DC",
