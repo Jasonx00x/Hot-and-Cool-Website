@@ -32,8 +32,9 @@ export default function Projects() {
           </div>
           <div className="project-copy">
             <span className="project-meta">{project.location} • {project.type}</span>
-            <h2>{project.name}</h2>
+            <h2><Link href={`/projects/${project.slug}`}>{project.name}</Link></h2>
             <p>{project.description}</p>
+            <Link className="project-case-link" href={`/projects/${project.slug}`}>See how we support this property <ArrowUpRight size={15}/></Link>
             {project.management && <a className="project-management" href={project.management.url} target="_blank" rel="noreferrer">
               Managed by {project.management.name} <ArrowUpRight size={15}/>
             </a>}
