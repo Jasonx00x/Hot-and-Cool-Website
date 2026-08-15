@@ -13,6 +13,7 @@ import { JsonLd } from "@/lib/seo";
 
 const sectionId = (heading: string) => heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 const isoDate = (date: string) => `${date}T09:00:00-04:00`;
+const bodyText = (body: string | string[]) => Array.isArray(body) ? body : [body];
 
 export function generateStaticParams() { return blogs.map(({ slug }) => ({ slug })); }
 
@@ -55,7 +56,17 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const modified = new Date(`${post.dateModified}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   const relatedServices = post.relatedServices.map((serviceSlug) => serviceBySlug[serviceSlug]).filter(Boolean);
   const relatedPosts = blogs.filter((candidate) => candidate.slug !== post.slug).slice(0, 3);
-  const wordCount = [post.quickAnswer, post.intro, ...post.sections.flatMap((section) => [section.body, ...(section.bullets ?? [])])].join(" ").split(/\s+/).length;
+  const articleFaqs = post.faqs ?? blogFaqs;
+  const wordCount = [
+    post.quickAnswer,
+    post.intro,
+    ...post.sections.flatMap((section) => [
+      ...bodyText(section.body),
+      ...(section.bullets ?? []),
+      ...(section.subsections ?? []).flatMap((subsection) => [subsection.heading, ...bodyText(subsection.body), ...(subsection.bullets ?? [])]),
+    ]),
+    ...articleFaqs.flatMap((faq) => [faq.question, faq.answer]),
+  ].join(" ").split(/\s+/).length;
   const articleUrl = `${site.url}/blog/${post.slug}`;
 
   return <>
@@ -71,7 +82,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <p className="article-lead">{post.intro}</p>
       <aside className="quick-answer" aria-labelledby="quick-answer-title"><Eyebrow>Quick answer</Eyebrow><h2 id="quick-answer-title">What homeowners should know</h2><p>{post.quickAnswer}</p></aside>
       <nav className="article-toc" aria-label="Article contents"><strong>In this guide</strong><ol>{post.sections.map((section) => <li key={section.heading}><a href={`#${sectionId(section.heading)}`}>{section.heading}</a></li>)}</ol></nav>
-      {post.sections.map((section) => <section key={section.heading} id={sectionId(section.heading)}><h2>{section.heading}</h2><p>{section.body}</p>{section.bullets && <ul className="article-checklist">{section.bullets.map((item) => <li key={item}><Check size={18}/>{item}</li>)}</ul>}</section>)}
+      {post.sections.map((section) => <section key={section.heading} id={sectionId(section.heading)}><h2>{section.heading}</h2>{bodyText(section.body).map((paragraph, index) => <p key={`${section.heading}-${index}`}>{paragraph}</p>)}{section.bullets && <ul className="article-checklist">{section.bullets.map((item) => <li key={item}><Check size={18}/>{item}</li>)}</ul>}{section.subsections?.map((subsection) => <div className="article-subsection" key={subsection.heading}><h3>{subsection.heading}</h3>{bodyText(subsection.body).map((paragraph, index) => <p key={`${subsection.heading}-${index}`}>{paragraph}</p>)}{subsection.bullets && <ul className="article-checklist">{subsection.bullets.map((item) => <li key={item}><Check size={18}/>{item}</li>)}</ul>}</div>)}</section>)}
+
+      {post.internalLinks && <section className="article-internal" aria-labelledby="local-resources-title"><Eyebrow>Local resources</Eyebrow><h2 id="local-resources-title">Plan the right next step</h2><div className="article-related-grid">{post.internalLinks.map((item) => <Link href={item.href} key={item.href}><span>Hot & Cool resource</span><strong>{item.title}</strong><p>{item.description}</p><em>Explore resource <ArrowRight size={15}/></em></Link>)}</div></section>}
+
+      {post.sources && <section className="article-sources" aria-labelledby="sources-title"><Eyebrow>Sources</Eyebrow><h2 id="sources-title">Technical and safety references</h2><p>Material technical, safety, moisture, and code statements in this guide were checked against the following primary sources.</p><ol>{post.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer"><strong>{source.title}</strong><span>{source.publisher}</span></a></li>)}</ol></section>}
 
       <section className="article-services" aria-labelledby="related-services-title"><Eyebrow>Related services</Eyebrow><h2 id="related-services-title">Professional help for the next step</h2><div className="article-service-links">{relatedServices.map((service) => <Link href={`/services/${service.slug}`} key={service.slug}><strong>{service.title}</strong><span>{service.short}</span><em>Explore service <ArrowRight size={15}/></em></Link>)}</div></section>
 
@@ -82,7 +97,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <p className="article-updated">Last updated <time dateTime={post.dateModified}>{modified}</time>. General information only; actual HVAC conditions require property-specific evaluation.</p>
     </div></article>
 
-    <FAQSection items={blogFaqs} title="HVAC advice questions"/>
+    <FAQSection items={articleFaqs} title={post.faqs ? "AC water leak questions" : "HVAC advice questions"} intro={post.faqs ? "Practical answers for protecting the property and choosing a safe next step." : undefined}/>
     <CTA dark title="Need professional HVAC help?" text={`Hot & Cool Services serves Manassas, Northern Virginia, Maryland, and Washington, DC. Call ${site.phone} or request service online.`}/>
     <JsonLd data={{
       "@context": "https://schema.org",
@@ -103,6 +118,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       author: { "@type": "Organization", name: site.name, url: `${site.url}/about` },
       publisher: { "@type": "Organization", name: site.name, url: site.url, logo: { "@type": "ImageObject", url: images.logoSquare } },
       about: post.keywords.slice(0, 4).map((keyword) => ({ "@type": "Thing", name: keyword })),
+      citation: post.sources?.map((source) => source.url),
     }}/>
     <JsonLd data={{
       "@context": "https://schema.org",

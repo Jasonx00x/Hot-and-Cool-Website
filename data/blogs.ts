@@ -1,4 +1,7 @@
-export type BlogSection = { heading: string; body: string; bullets?: string[] };
+export type BlogSubsection = { heading: string; body: string | string[]; bullets?: string[] };
+export type BlogSection = { heading: string; body: string | string[]; bullets?: string[]; subsections?: BlogSubsection[] };
+export type BlogLink = { title: string; description: string; href: string };
+export type BlogSource = { title: string; publisher: string; url: string };
 export type BlogPost = {
   slug: string;
   title: string;
@@ -16,6 +19,9 @@ export type BlogPost = {
   intro: string;
   sections: BlogSection[];
   relatedServices: string[];
+  faqs?: { question: string; answer: string }[];
+  internalLinks?: BlogLink[];
+  sources?: BlogSource[];
 };
 
 const articleImages = {
@@ -26,6 +32,158 @@ const articleImages = {
 };
 
 export const blogs: BlogPost[] = [
+  {
+    slug: "ac-leaking-water-northern-virginia",
+    title: "Why Is My AC Leaking Water? A Northern Virginia Homeowner Guide",
+    seoTitle: "AC Leaking Water? Causes & Safe Next Steps in VA, DC & MD",
+    description: "See why an AC leaks water, what to check safely, when to shut it off, and how to limit damage in Northern Virginia, Washington, DC, and Maryland.",
+    date: "2026-08-15",
+    dateModified: "2026-08-15",
+    readTime: "13 min read",
+    category: "AC water leaks",
+    focusKeyword: "AC leaking water",
+    keywords: ["AC leaking water", "air conditioner leaking water inside", "clogged AC condensate drain", "AC drain pan overflowing", "AC repair Northern Virginia", "HVAC water leak Washington DC"],
+    image: articleImages.maintenance,
+    imageAlt: "Hot & Cool Services technicians installing overhead piping at a local commercial property",
+    quickAnswer: "An AC leaking water indoors usually has a condensate drainage problem, a frozen evaporator coil that is thawing, a damaged or misaligned drain pan, or a failed condensate pump or overflow control. Turn cooling off if water is approaching wiring, a ceiling is wet or sagging, the drain pan is overflowing, or ice is visible. You can safely confirm the thermostat setting, inspect the accessible filter, note where the water appears, and protect nearby belongings—but do not open equipment panels, use chemicals in an unknown drain, or work around energized components.",
+    intro: "A small puddle beside an air handler can become a stained ceiling, damaged flooring, or an urgent tenant call surprisingly fast. The water is often ordinary condensation created during cooling, but it is no longer reaching its intended drain. This guide helps homeowners and property managers in Northern Virginia, Washington, DC, and nearby Maryland identify what they are seeing, take safe immediate steps, document the problem, and know when professional AC repair is the right next move.",
+    sections: [
+      {
+        heading: "First, decide whether the AC should stay off",
+        body: [
+          "Treat an indoor AC water leak as a property-protection issue first and a cooling issue second. If water is touching or approaching electrical wiring, receptacles, light fixtures, the air handler's electrical compartment, or another energized device, stay clear of the wet area. Do not reach through water to operate a switch. If it is safe to use the thermostat from a dry location, set cooling to Off. Contact an HVAC professional, and use the appropriate building-emergency or electrical response if water has reached electrical components.",
+          "Also shut cooling off when you see ice on the refrigerant tubing or indoor coil area, water is actively overflowing a pan, a ceiling below the equipment is wet or sagging, or the leak returns immediately after being wiped up. Continuing to cool can create more condensate or allow more ice to form. A safety switch may already have stopped the system; do not bypass it to restore cooling. That shutdown may be the only thing preventing an overflow."
+        ],
+        bullets: [
+          "Keep people and pets away from wet electrical areas",
+          "Move dry, portable belongings away from the leak without entering an unsafe area",
+          "Place a container only where it can sit securely and away from electricity",
+          "Photograph the equipment, water path, ceiling, flooring, and thermostat display",
+          "Notify the property manager promptly when equipment or building finishes are shared"
+        ]
+      },
+      {
+        heading: "Why an air conditioner produces water in the first place",
+        body: [
+          "During normal cooling, warm indoor air passes over a cold evaporator coil. Moisture in that air condenses on the coil, much like water forming on the outside of a cold glass. The condensate falls into a pan and leaves through a drain line. Some below-grade or hard-to-drain installations use a condensate pump to lift the water to an approved discharge point. In a humid Mid-Atlantic summer, the system can remove a meaningful amount of moisture while it runs, so the drainage path has to remain open and correctly pitched.",
+          "Condensation at the indoor coil is normal; water on the floor, in a return platform, across a ceiling, or outside the intended drain is not. The leak location does not always reveal the failed part. Water can travel along refrigerant-line insulation, framing, piping, or the air-handler cabinet before it becomes visible. A stain several feet away from the unit may still originate at the HVAC system, but plumbing, roofing, or building-envelope leaks can look similar and should not be ruled out without inspection."
+        ]
+      },
+      {
+        heading: "The most common reasons an AC leaks water indoors",
+        body: "Several faults can interrupt condensate removal or create more water than the drainage system can handle. More than one condition may be present, especially in older equipment or systems located in attics and finished ceilings.",
+        subsections: [
+          {
+            heading: "A clogged condensate drain or blocked trap",
+            body: [
+              "Dust, biological buildup, insulation fragments, or other debris can restrict the condensate line or its trap. Water then backs up into the primary pan and may reach a secondary pan, trigger a float switch, or overflow. ENERGY STAR specifically includes condensate-drain inspection in professional maintenance because a plugged drain can cause household water damage and affect indoor humidity.",
+              "A visible pipe termination that is not dripping does not prove the line is clogged; the system may be off, the line may discharge somewhere else, or the blockage may be intermittent. Likewise, water at an exterior termination does not prove every section is clear. A technician can trace the actual route, inspect accessible cleanouts and traps, clear the obstruction with appropriate methods, and verify flow without pushing debris deeper into the system."
+            ]
+          },
+          {
+            heading: "A frozen evaporator coil is thawing",
+            body: [
+              "Restricted airflow, a blower problem, dirty coil conditions, or a refrigerant-side fault can allow the evaporator coil to freeze. When the ice melts, water may overwhelm the pan or miss it entirely. Clues include ice on the larger insulated refrigerant line, weak airflow, cooling that declined before the leak appeared, or a large release of water after the system stopped.",
+              "Check only the accessible filter and visible supply and return openings. Do not chip ice, apply heat, open the coil cabinet, or restart the system simply because the visible ice has melted. Thawing removes the symptom, not the airflow or refrigeration problem that caused it. Refrigerant-circuit work belongs to an EPA Section 608-certified technician."
+            ]
+          },
+          {
+            heading: "The drain pan is cracked, rusted, shifted, or overflowing",
+            body: "A primary pan can deteriorate, and a secondary pan can corrode, become misaligned, or collect water because the primary drainage system failed. Attic installations deserve especially quick attention because overflow can wet insulation, framing, drywall, and ceilings before anyone sees a puddle. A pan holding water is evidence to investigate—not a reservoir to empty repeatedly while continuing to run the AC. The repair must address why water accumulated and whether the pan and overflow protection remain serviceable."
+          },
+          {
+            heading: "A condensate pump or overflow switch failed",
+            body: "Where gravity cannot carry condensate to an approved location, a small pump may collect and discharge it. A failed pump, stuck float, blocked tubing, lost power, or disconnected hose can create a leak or stop the cooling system. Never bypass a float switch or hard-wire a pump to keep the AC running. The technician should confirm the pump's power, reservoir condition, tubing route, check valve where applicable, and safety interlock according to the equipment instructions."
+          },
+          {
+            heading: "Drain-line pitch, insulation, or installation details are wrong",
+            body: "Poor slope, a sagging flexible section, an improperly configured trap, an unsealed cabinet, or missing insulation on cold piping can cause standing water, air leakage, or condensation outside the intended pan. These are installation and code-compliance questions, not good candidates for guesswork. Virginia currently uses the 2021 code cycle, and mechanical-code provisions address approved condensate disposal and auxiliary protection where overflow could damage building components. The locally adopted code, equipment instructions, and actual installation all matter."
+          }
+        ]
+      },
+      {
+        heading: "Safe checks you can make without opening the equipment",
+        body: [
+          "A short, disciplined observation can help a service technician without turning the visit into unsafe DIY repair. From a dry, accessible location, note whether the system was cooling normally before the leak, whether airflow became weak, and whether the thermostat or equipment shows an alert. Look at the filter only if it is in a normal homeowner-access location. If it is visibly loaded, record the size and condition; do not run the system without a filter or force in a different size.",
+          "Identify the first visible water, not just the largest puddle. Is it under the indoor unit, inside a secondary pan, around a condensate pump, at a ceiling register, on the insulated refrigerant line, or near a plumbing pipe? Note whether water appears only while cooling runs, after it stops, or during rain. These details help distinguish drainage, freeze-up, pump, sweating, plumbing, and roof possibilities."
+        ],
+        bullets: [
+          "Thermostat mode, setpoint, and any alert message",
+          "Time the leak began and whether cooling performance changed first",
+          "Visible ice, weak airflow, unusual sound, or musty odor",
+          "Filter condition and exact size, if safely accessible",
+          "Whether a float switch appears to have stopped the system",
+          "Photos of the first wet point and the full affected area"
+        ]
+      },
+      {
+        heading: "What not to do to an AC condensate system",
+        body: [
+          "Online advice often recommends pouring bleach, vinegar, tablets, or drain cleaner into any available PVC opening. That is not a universal maintenance procedure. You may be looking at the wrong opening; a chemical may be incompatible with the equipment, drain materials, pump, or manufacturer guidance; and mixing residues can create a hazardous reaction. Do not use compressed air that can separate fittings or force contaminated water into the equipment or occupied space. Follow the specific equipment instructions or let a technician choose and control the clearing method.",
+          "Do not remove sealed service panels, reach into a drain pan near wiring, reset a tripped breaker repeatedly, bypass an overflow device, or add refrigerant. Never assume that a wet ceiling is structurally sound. Avoid standing beneath bulging drywall, and contact the appropriate property or restoration professional when building materials have absorbed water. EPA guidance emphasizes correcting the moisture source and drying water-damaged areas promptly—generally within 24 to 48 hours—to reduce the chance of mold growth."
+        ]
+      },
+      {
+        heading: "How a professional diagnoses an AC water leak",
+        body: [
+          "A useful diagnosis follows the water path and tests the system that creates it. The technician may inspect the primary and secondary pans, drain connection, trap, cleanout, line routing, termination, pump, float switches, and evidence of prior overflow. After clearing or repairing drainage components, the line should be tested for actual flow rather than assumed clear because standing water disappeared.",
+          "If ice or weak airflow is involved, the visit may also include the filter, blower operation, accessible coil condition, supply and return restrictions, temperature response, controls, and refrigerant-side measurements. The goal is to determine whether the leak is purely drainage-related or the downstream result of a cooling fault. For a recurring ceiling stain, the HVAC finding may need to be coordinated with plumbing, roofing, or water-restoration work so the true source and all wet materials are addressed."
+        ],
+        bullets: [
+          "Locate the origin and map the complete drainage route",
+          "Check pans, traps, line pitch, pump operation, and overflow protection",
+          "Verify drainage under operating conditions when safe",
+          "Investigate airflow or refrigeration causes if freezing occurred",
+          "Explain the failed condition, repair scope, and prevention plan"
+        ]
+      },
+      {
+        heading: "Steps for property managers and multifamily teams",
+        body: [
+          "In an apartment or managed property, speed and documentation matter because one unit's condensate can affect another unit or a common area. Record the resident report, unit number, equipment location, time first observed, thermostat status, and all affected finishes. Ask whether cooling or airflow changed before the leak. Coordinate access to the air handler, the unit below, any shared mechanical area, and the drain termination. Avoid promising that the issue is solved until drainage has been verified and wet building materials have been evaluated.",
+          "Recurring leaks across several apartments may indicate a maintenance pattern, shared drain issue, installation detail, or access problem rather than unrelated resident behavior. Track which components were cleared or replaced, whether safety switches operated, where each line terminates, and what follow-up drying or finish repair is needed. A repeatable documentation process makes it easier to separate active HVAC service from water mitigation and long-term capital planning."
+        ]
+      },
+      {
+        heading: "Preventing the next condensate overflow",
+        body: [
+          "Condensate protection starts with the system's manufacturer instructions and a maintenance plan suited to the property. Professional seasonal maintenance should include drainage inspection, especially before and during heavy cooling use. Keep the correct filter on an appropriate check or replacement schedule, keep returns and supplies unobstructed, and report weak airflow or ice before a leak develops. Where equipment is above finished space, ask the technician to identify the primary drain, secondary protection, and what a normal discharge looks like for that installation.",
+          "Do not rely on a float switch as a maintenance substitute. It is backup protection, and not every older installation has the same safeguards. If the AC shuts off unexpectedly during humid weather, check for an alert or visible water before repeatedly resetting controls. For Northern Virginia, DC, and Maryland properties, plan access and drainage checks before peak summer demand and after construction work that may introduce dust or disturb piping."
+        ]
+      },
+      {
+        heading: "When to request AC repair in Northern Virginia, DC, or Maryland",
+        body: [
+          "Request service promptly when water is indoors, a safety switch has stopped the system, ice is visible, cooling or airflow has declined, a pump is not operating, or the leak has returned. Same-day attention is especially important for attic units, finished ceilings, multifamily buildings, and any location where water can reach electrical equipment or another occupied space. If the wet area is extensive, coordinate HVAC repair with a qualified water-mitigation or building-repair provider rather than expecting the AC visit alone to dry and restore finishes.",
+          "Hot & Cool Services provides AC repair and HVAC maintenance for homeowners, businesses, apartment communities, and managed properties across Manassas and Northern Virginia, Washington, DC, and nearby Maryland. When you request service, share the equipment location, first visible leak point, whether the system is off, and any photos or access instructions. That preparation helps the service conversation start with the right safety and property priorities."
+        ]
+      }
+    ],
+    relatedServices: ["ac-repair", "hvac-maintenance", "apartment-hvac"],
+    faqs: [
+      { question: "Should I turn off my AC if it is leaking water?", answer: "Turn cooling off if water is near electrical components, a pan is overflowing, a ceiling is wet or sagging, ice is visible, or the leak is actively spreading. If the area is electrically unsafe, stay clear rather than reaching through water to a switch. A small amount of water at the normal outdoor drain termination is different from water leaking indoors." },
+      { question: "Can a dirty air filter make an AC leak water?", answer: "A severely restricted filter can reduce airflow and contribute to evaporator-coil freezing. When the ice melts, water may overflow or miss the drain pan. A dirty filter is not the only possible cause, so persistent water, ice, or weak airflow still needs diagnosis." },
+      { question: "Why did my AC stop cooling when the drain pan filled?", answer: "Many systems use a float or water-level safety switch that stops cooling before condensate overflows. Do not bypass the switch. The shutdown is a warning that the drain, pan, pump, or another condensate component needs inspection." },
+      { question: "Can I pour bleach or vinegar into my AC drain line?", answer: "Only follow a cleaning procedure specifically approved for your equipment and installation. Do not pour chemicals into an unidentified opening or mix products. Drain materials, pumps, manufacturer instructions, and existing residues vary, and an incorrect method can create damage or exposure." },
+      { question: "How quickly should water-damaged drywall or carpet be dried?", answer: "EPA guidance recommends acting quickly and drying wet or damp materials within about 24 to 48 hours when possible to reduce the chance of mold growth. Fix the water source first and involve a qualified restoration professional when materials are extensively wet, contaminated, hidden, or difficult to dry." },
+      { question: "Who should I call for an AC leak in a rental or condo?", answer: "Notify the property manager or association according to the property's emergency process, then arrange qualified HVAC service for the equipment and drainage system. Water mitigation, plumbing, roofing, or finish repair may also be needed depending on the source and affected building materials." }
+    ],
+    internalLinks: [
+      { title: "Northern Virginia service area", description: "See HVAC support across Manassas, Fairfax, Arlington, Alexandria, and nearby communities.", href: "/service-areas/northern-virginia" },
+      { title: "Washington, DC HVAC service", description: "Review residential, commercial, and managed-property service in the District.", href: "/service-areas/washington-dc" },
+      { title: "Rockville and Montgomery County service", description: "Review heating, cooling, maintenance, and managed-property HVAC support in nearby Maryland.", href: "/service-areas/rockville-md" },
+      { title: "Hot & Cool project experience", description: "See examples of multifamily and commercial HVAC work across the region.", href: "/projects" },
+      { title: "AC running but not cooling", description: "Compare water-leak symptoms with the broader causes of lost cooling.", href: "/blog/why-is-my-ac-running-but-not-cooling" }
+    ],
+    sources: [
+      { title: "Maintenance Checklist", publisher: "ENERGY STAR", url: "https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist" },
+      { title: "A Brief Guide to Mold, Moisture and Your Home", publisher: "U.S. Environmental Protection Agency", url: "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home" },
+      { title: "Section 608 Technician Certification", publisher: "U.S. Environmental Protection Agency", url: "https://www.epa.gov/section608/section-608-technician-certification" },
+      { title: "2021 Virginia Codes Effective January 18, 2024", publisher: "Virginia Department of Housing and Community Development", url: "https://www.dhcd.virginia.gov/codes" },
+      { title: "2021 Virginia Mechanical Code: Condensate Disposal", publisher: "International Code Council", url: "https://codes.iccsafe.org/content/VAMC2021P1/index" },
+      { title: "Why Is My AC Leaking Water?", publisher: "Carrier", url: "https://www.carrier.com/us/en/residential/hvac-resources/air-conditioners/why-is-my-ac-leaking-water/" }
+    ]
+  },
   {
     slug: "why-is-my-ac-running-but-not-cooling",
     title: "Why Is My AC Running but Not Cooling?",
