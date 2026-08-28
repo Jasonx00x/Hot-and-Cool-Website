@@ -20,6 +20,8 @@ export type BlogPost = {
   sections: BlogSection[];
   relatedServices: string[];
   faqs?: { question: string; answer: string }[];
+  faqTitle?: string;
+  faqIntro?: string;
   internalLinks?: BlogLink[];
   sources?: BlogSource[];
 };
@@ -32,6 +34,161 @@ const articleImages = {
 };
 
 export const blogs: BlogPost[] = [
+  {
+    slug: "one-room-hotter-than-rest-of-house",
+    title: "Why Is One Room Hotter Than the Rest of the House?",
+    seoTitle: "One Room Hotter Than the Rest? VA, DC & MD HVAC Guide",
+    description: "Learn why one room stays hotter, which checks are safe, and how airflow, ducts, insulation, sun, controls, and system design are diagnosed.",
+    date: "2026-08-28",
+    dateModified: "2026-08-28",
+    readTime: "14 min read",
+    category: "Uneven room temperatures",
+    focusKeyword: "one room hotter than rest of house",
+    keywords: ["one room hotter than rest of house", "uneven cooling", "upstairs hotter than downstairs", "weak airflow in one room", "HVAC not cooling one room", "duct airflow problems"],
+    image: articleImages.cooling,
+    imageAlt: "Two Hot & Cool Services technicians unloading HVAC equipment beside a branded service van",
+    quickAnswer: "When one room is hotter than the rest of the house, the cause is often local to that room or its air path: a blocked register, restricted return path, damaged or leaky duct, extra sun or attic heat, missing insulation, or a zoning or control issue. First compare the room with nearby spaces under the same conditions, confirm that visible grilles are open and unobstructed, check the accessible filter, and note whether closing the door changes the problem. Do not open equipment panels, enter an unsafe attic, or adjust hidden dampers at random. A useful professional assessment measures airflow and room load before recommending balancing, duct repair, envelope work, controls, or equipment changes.",
+    intro: "A bedroom that is comfortable at breakfast can feel several degrees warmer by late afternoon. An upstairs office may stay stuffy while the hallway feels normal, or one apartment may generate repeated comfort calls even though neighboring units are satisfied. Across Northern Virginia, Washington, DC, and nearby Maryland, these complaints can surface in multi-level townhomes, sunny rowhouses, top-floor apartments, additions, and ordinary single-family homes. The building type is only context—not a diagnosis. The fastest path to a durable solution is to identify whether the room is receiving too little conditioned air, losing its return path, gaining more heat than nearby spaces, or being controlled differently from the rest of the property.",
+    sections: [
+      {
+        heading: "Confirm that the problem is truly limited to one room or floor",
+        body: [
+          "Start by defining the pattern. If every room is warm while the air conditioner runs, use our guide to an AC running but not cooling; that broader symptom can point to thermostat, equipment, airflow, electrical, or refrigerant-side faults. This article is for a narrower situation: most of the property reaches a reasonable temperature while one room, one side, or one floor consistently does not.",
+          "Compare conditions rather than relying on a single moment. Use the same portable thermometer in the problem room and a nearby comfortable room, placing it away from direct sunlight, electronics, supply air, exterior doors, and hot surfaces. Record both readings at the same times for a day or two, along with outdoor conditions, thermostat setpoint, door position, occupancy, and whether the system was actively cooling. Consumer thermometers are not laboratory instruments, but a consistent pattern is more useful to a technician than an isolated reading from two different devices.",
+          "Notice when the difference appears. A west-facing bedroom that warms mainly from midafternoon to sunset suggests a different diagnostic branch than a room with weak airflow all day. A room that changes when its door closes may have a return-air-path problem. An entire top floor that drifts warmer can involve stairwell air movement, attic exposure, duct routing, zoning, or system design rather than a single blocked register."
+        ],
+        bullets: [
+          "Record the problem room and a nearby comparison room at the same time",
+          "Note sun exposure, blinds, occupancy, electronics, and door position",
+          "Listen for short cycling, unusual sounds, or long run times",
+          "Identify whether the issue affects one room, one floor, or the whole property",
+          "For rentals or multifamily buildings, follow the property’s reporting and access process"
+        ]
+      },
+      {
+        heading: "Safe checks to make before scheduling HVAC service",
+        body: [
+          "A few low-risk observations can rule out simple obstructions and make the service call more productive. Confirm that the room’s supply register is open and not covered by furniture, a rug, boxes, or heavy curtains. Check the nearest return grille as well; a return is usually larger and does not have an adjustment lever. Keep both clear. Do not remove a grille, insert tools into ductwork, or assume that closing registers elsewhere will push the right amount of air into the room.",
+          "Check the system filter only if it is in a normal homeowner-access location. A heavily loaded filter can restrict airflow throughout the system, though it rarely explains a truly isolated room by itself. Use the size and type specified for the equipment, and do not run the system without a filter. If the filter is clean and most rooms are comfortable, continue documenting the local pattern instead of repeatedly lowering the thermostat.",
+          "Try the room with its door open and closed while the HVAC system runs. If airflow at the supply register seems to weaken, the door pulls itself, or the comfort difference becomes more pronounced with the door closed, tell the technician. That is an observation—not a do-it-yourself pressure test—but it can help focus attention on how air returns to the central equipment. Also confirm that any visible zone thermostat is in its normal mode and that no accessible schedule or setback is overriding the desired temperature."
+        ],
+        bullets: [
+          "Open and uncover the supply register and nearby return grille",
+          "Check the accessible filter without opening an equipment cabinet",
+          "Compare the room with its door open and closed",
+          "Close blinds or shades during strong sun and note the result",
+          "Photograph grille locations and any safely visible damaged duct—not hidden equipment"
+        ]
+      },
+      {
+        heading: "Why one room can stay hotter than the rest",
+        body: "The symptom has several possible branches, and more than one may be present. Feeling weak air at a register is useful information, but it does not establish where the restriction begins or whether the room also has an unusually high cooling load.",
+        subsections: [
+          {
+            heading: "The room is receiving too little supply air",
+            body: [
+              "Conditioned air must travel from the blower through a trunk, branch duct, boot, and register before it reaches the room. A closed balancing damper, crushed or sharply kinked flexible duct, loose connection, undersized branch, obstructed grille, or poorly selected register can reduce delivery. Long runs through a hot attic can also lose cooling before air reaches the farthest room if the duct is damaged or inadequately insulated.",
+              "ENERGY STAR lists rooms that are difficult to heat or cool and tangled or kinked flexible ducts as warning signs of poor duct performance. It also notes that a typical house may lose about 20% to 30% of the air moving through its ducts because of leaks, holes, and poor connections. That national estimate is a reason to test—not a claim about your property or proof that leakage causes your hot room."
+            ]
+          },
+          {
+            heading: "Supply air enters, but it cannot return effectively",
+            body: [
+              "A forced-air system is a loop. The blower supplies conditioned air to a room and must receive air back through dedicated returns, central returns, transfer grilles, jump ducts, or other designed pathways. The U.S. Department of Energy explains that a central return arrangement can create drafts and room-to-room temperature differences when the return path is not designed correctly.",
+              "A bedroom door can reveal this issue because closing it changes the available return path. Do not cut a door, enlarge an undercut, or add a transfer opening based on an online diagnosis; return-path changes affect pressure, sound, privacy, smoke movement, and building requirements. A technician can compare room pressure and airflow with the door open and closed, then determine whether the return strategy is actually contributing to the complaint."
+            ]
+          },
+          {
+            heading: "The room gains more heat than neighboring spaces",
+            body: [
+              "HVAC airflow may be reasonable while the room’s cooling load is not. Afternoon sun through large west- or south-facing windows, an exterior wall, roof or attic exposure, air leakage, missing or uneven insulation, people, computers, and other internal heat sources can all change how much cooling that room needs. The Department of Energy notes that window orientation and solar heat gain affect cooling performance, while ENERGY STAR maps hot and cold rooms to both duct problems and insulation or air-leakage concerns.",
+              "Use shades as a simple observation: if reducing direct afternoon sun noticeably narrows the temperature gap, share that result. It does not prove that the window must be replaced. Likewise, a top-floor room does not automatically need more supply air; increasing airflow without understanding the envelope and return path can shift discomfort elsewhere."
+            ]
+          },
+          {
+            heading: "Thermostat, zoning, or control behavior does not represent the room",
+            body: [
+              "A central thermostat responds to conditions where it is installed, not to every room equally. If it sits in a shaded interior hallway, the system may satisfy that location before a sunny bedroom cools. Zoned systems add motorized dampers and zone controls; a sensor, damper, configuration, or schedule issue can prevent one zone from receiving the intended airflow.",
+              "Smart-room sensors can help some systems manage occupied spaces, but they are not a cure for crushed ductwork, missing return capacity, or excessive room load. Confirm schedules and accessible settings, then leave concealed dampers, wiring, and control panels to a qualified technician."
+            ]
+          },
+          {
+            heading: "The equipment or duct system was not designed for the actual load",
+            body: [
+              "Additions, finished attics, converted garages, changed windows, new partitions, and altered ductwork can create rooms the original system was never designed to serve. Replacement equipment selected only from the old nameplate can preserve an existing distribution problem. ENERGY STAR recommends using the home’s actual characteristics for equipment sizing and evaluating system airflow and duct leakage rather than relying on a rule of thumb.",
+              "Do not assume that larger equipment will fix uneven temperatures. Oversized systems may cycle too quickly, while undersized equipment can struggle during peak conditions; both questions require property-specific measurements. If most of the home is comfortable and one room is not, room load and air distribution deserve attention before a whole-system replacement is proposed."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "What a useful room-comfort assessment should measure",
+        body: [
+          "A credible assessment begins with the pattern you documented and follows the air path. Depending on the system and access, a technician may compare room temperatures, measure delivered airflow, evaluate supply and return pressure, inspect accessible duct connections and insulation, review filter and blower conditions, and confirm that registers, dampers, thermostats, sensors, and zones respond as intended. ENERGY STAR specifically recommends duct inspection, leakage testing, repair where needed, and airflow verification against manufacturer requirements.",
+          "The room itself also matters. Window area and orientation, exterior surfaces, attic or roof exposure, occupancy, appliances, and changes to the floor plan inform a room-by-room load discussion. If envelope problems appear likely, the HVAC findings may need to be coordinated with a qualified home-energy or insulation professional. Air sealing around fuel-burning equipment can create combustion-safety and ventilation concerns, so broad sealing work should not proceed without the appropriate safety review.",
+          "Ask for findings that connect evidence to the recommendation. ‘The room needs more air’ is incomplete unless the provider has considered whether the system can deliver it, whether the return path can accept it, and whether a duct defect or excess load is the real constraint. Measurements also create a baseline that can be checked after approved work."
+        ],
+        bullets: [
+          "Room-to-room temperature pattern under comparable conditions",
+          "Supply airflow and the available return-air path",
+          "Accessible duct leakage, disconnection, kinks, insulation, and branch layout",
+          "Blower, filter, register, damper, thermostat, and zoning operation",
+          "Window, attic, exterior-wall, occupancy, and equipment heat loads",
+          "Post-work verification tied to the original comfort complaint"
+        ]
+      },
+      {
+        heading: "Match the solution to the finding—not the symptom alone",
+        body: [
+          "There is no single ‘hot room fix.’ A blocked register may need only clearance. A poorly adjusted system may need measured balancing. A loose, torn, or kinked branch may need duct repair and sealing. An inadequate return path may need a designed return solution. A zone-control fault may need control or damper service. A high-load room may benefit from shading, air sealing, insulation, window work, or a correctly designed supplemental comfort strategy. Equipment or major duct changes should be reserved for cases where sizing and distribution evidence support them.",
+          "Duct cleaning is different from duct sealing and airflow balancing. Cleaning removes accumulated material from applicable system components; it does not close leaks, reconnect a branch, resize a return, or correct a room load. Visible debris or a separate contamination concern can justify its own inspection, but an uncomfortable room should not be sold a cleaning as an automatic airflow repair.",
+          "Be cautious with quick fixes that move the problem. Closing several registers in comfortable rooms can increase duct pressure and reduce total system airflow. Leaving the thermostat far below the desired temperature may overcool other areas without solving distribution. Portable fans may improve how a person feels, but they do not diagnose the HVAC system. The most economical solution is the one tied to verified cause, even when that solution is smaller than expected."
+        ]
+      },
+      {
+        heading: "When uneven temperatures require prompt service",
+        body: [
+          "A stable comfort difference usually allows time for observation and a scheduled assessment. Stop routine troubleshooting and request prompt HVAC service when the room loses airflow suddenly, the system begins making mechanical or electrical sounds, ice appears on refrigerant tubing or equipment, water is present indoors, a breaker repeatedly trips, or a burning odor develops. Stay clear of wet electrical areas and do not repeatedly reset a tripped breaker. If the entire home is becoming warmer, treat it as a broader cooling failure rather than a room-balance complaint.",
+          "For multifamily or managed properties, escalate conditions through the building’s procedure when the complaint affects an older adult, infant, medically vulnerable occupant, multiple units, or a space with heat-sensitive operations. Property staff should document the affected unit, measured conditions, time pattern, access instructions, and whether shared equipment or neighboring spaces show similar symptoms. Avoid opening shared equipment or changing building controls without authorization."
+        ]
+      },
+      {
+        heading: "Prepare for an airflow and comfort visit in Northern Virginia, DC, or Maryland",
+        body: [
+          "Late-summer sun and long cooling cycles can make room-to-room differences especially noticeable across the DC metro region, but the same distribution issue may reappear as a cold room in winter. Before the visit, gather the temperature log, photos of visible grilles, thermostat schedule, filter information, equipment age if known, and details about renovations or when the problem began. Make attic, mechanical-room, and unit access available only where it is safe and authorized.",
+          "Hot & Cool Services supports homeowners, apartment communities, property managers, and businesses across Manassas and Northern Virginia, Washington, DC, and nearby Maryland. When requesting service, describe the issue as one room or floor being warmer than the rest and share whether airflow, sun, and door position change the pattern. Ask for a diagnosis of airflow, duct condition, return path, controls, and room load so the next step is based on the property—not a generic prescription."
+        ]
+      }
+    ],
+    relatedServices: ["ac-repair", "hvac-maintenance", "apartment-hvac"],
+    faqs: [
+      { question: "Why is one bedroom hotter when the door is closed?", answer: "Closing the door can restrict the path that air uses to return to the central HVAC equipment, creating a pressure and airflow imbalance. It can also change how heat from occupants, electronics, or sun accumulates. Compare the room with the door open and closed, then have the return path and airflow measured before modifying the door or wall." },
+      { question: "Should I close vents downstairs to make the upstairs cooler?", answer: "Do not close multiple registers as a balancing strategy. It can raise duct pressure, reduce total system airflow, create noise, and shift the comfort problem. A technician can measure delivery and adjust approved balancing dampers or recommend duct and control changes based on the system’s capacity." },
+      { question: "Does weak airflow from one vent mean the duct is leaking?", answer: "Not necessarily. A leak is one possibility, but a kinked or undersized branch, closed damper, blocked register, blower or filter restriction, duct layout, or measurement conditions can also affect airflow. Inspection and airflow or leakage testing are more reliable than diagnosing the cause by feel alone." },
+      { question: "Will duct cleaning fix a room that is always hot?", answer: "Usually not unless verified debris is materially obstructing the applicable duct or component. Duct cleaning removes accumulated material; it does not seal leaks, reconnect damaged ducts, add a return path, balance airflow, correct controls, or reduce solar and attic heat gain." },
+      { question: "Is an upstairs floor being warmer always an HVAC sizing problem?", answer: "No. Upstairs discomfort can involve attic and roof exposure, sun, air leakage, insulation, stairwell air movement, duct routing, return-air design, zoning, or equipment operation. Equipment sizing should be evaluated from the building’s actual load and airflow data rather than the symptom alone." },
+      { question: "When should I call for service about uneven cooling?", answer: "Schedule an assessment when the difference is persistent, growing, or interfering with sleep, work, tenants, or property operations. Request prompt service for sudden airflow loss, ice, indoor water, burning odors, repeated breaker trips, unusual equipment sounds, or whole-property cooling loss." }
+    ],
+    faqTitle: "Uneven room temperature questions",
+    faqIntro: "Clear answers about airflow, ductwork, room load, and the right next diagnostic step.",
+    internalLinks: [
+      { title: "AC repair", description: "Request diagnosis when weak airflow, ice, water, unusual sounds, or cooling failure accompanies the hot room.", href: "/services/ac-repair" },
+      { title: "HVAC maintenance", description: "Review seasonal service for filters, airflow, controls, drainage, and equipment condition.", href: "/services/hvac-maintenance" },
+      { title: "Northern Virginia service area", description: "See HVAC support across Manassas, Fairfax, Arlington, Alexandria, and nearby communities.", href: "/service-areas/northern-virginia" },
+      { title: "Washington, DC HVAC service", description: "Explore residential, commercial, and managed-property HVAC support in the District.", href: "/service-areas/washington-dc" },
+      { title: "Hot & Cool project experience", description: "View examples of multifamily and commercial HVAC work across the region.", href: "/projects" },
+      { title: "AC running but not cooling", description: "Use the broader troubleshooting guide when every room is getting warmer.", href: "/blog/why-is-my-ac-running-but-not-cooling" },
+      { title: "Duct cleaning", description: "Understand the separate service for accumulated material—not duct leakage, balancing, or room load.", href: "/services/duct-cleaning" }
+    ],
+    sources: [
+      { title: "Duct Sealing", publisher: "ENERGY STAR / U.S. Environmental Protection Agency", url: "https://www.energystar.gov/saveathome/heating-cooling/duct-sealing" },
+      { title: "HVAC Quality Installation", publisher: "ENERGY STAR / U.S. Environmental Protection Agency", url: "https://www.energystar.gov/saveathome/heating-cooling/hvac-quality-installation" },
+      { title: "Identify the Problems You Want to Fix", publisher: "ENERGY STAR / U.S. Environmental Protection Agency", url: "https://www.energystar.gov/saveathome/seal_insulate/identify-problems-you-want-fix" },
+      { title: "HVAC Ducted Returns", publisher: "U.S. Department of Energy Building Science Education", url: "https://bsesc.energy.gov/energy-basics/hvac-ducted-returns" },
+      { title: "HVAC Duct Terminal Sizing", publisher: "U.S. Department of Energy Building Science Education", url: "https://bsesc.energy.gov/energy-basics/hvac-duct-terminal-sizing" },
+      { title: "Window Types and Technologies", publisher: "U.S. Department of Energy", url: "https://www.energy.gov/energysaver/window-types-and-technologies" }
+    ]
+  },
   {
     slug: "ac-leaking-water-northern-virginia",
     title: "Why Is My AC Leaking Water? A Northern Virginia Homeowner Guide",
@@ -168,6 +325,8 @@ export const blogs: BlogPost[] = [
       { question: "How quickly should water-damaged drywall or carpet be dried?", answer: "EPA guidance recommends acting quickly and drying wet or damp materials within about 24 to 48 hours when possible to reduce the chance of mold growth. Fix the water source first and involve a qualified restoration professional when materials are extensively wet, contaminated, hidden, or difficult to dry." },
       { question: "Who should I call for an AC leak in a rental or condo?", answer: "Notify the property manager or association according to the property's emergency process, then arrange qualified HVAC service for the equipment and drainage system. Water mitigation, plumbing, roofing, or finish repair may also be needed depending on the source and affected building materials." }
     ],
+    faqTitle: "AC water leak questions",
+    faqIntro: "Practical answers for protecting the property and choosing a safe next step.",
     internalLinks: [
       { title: "Northern Virginia service area", description: "See HVAC support across Manassas, Fairfax, Arlington, Alexandria, and nearby communities.", href: "/service-areas/northern-virginia" },
       { title: "Washington, DC HVAC service", description: "Review residential, commercial, and managed-property service in the District.", href: "/service-areas/washington-dc" },

@@ -86,7 +86,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
       {post.internalLinks && <section className="article-internal" aria-labelledby="local-resources-title"><Eyebrow>Local resources</Eyebrow><h2 id="local-resources-title">Plan the right next step</h2><div className="article-related-grid">{post.internalLinks.map((item) => <Link href={item.href} key={item.href}><span>Hot & Cool resource</span><strong>{item.title}</strong><p>{item.description}</p><em>Explore resource <ArrowRight size={15}/></em></Link>)}</div></section>}
 
-      {post.sources && <section className="article-sources" aria-labelledby="sources-title"><Eyebrow>Sources</Eyebrow><h2 id="sources-title">Technical and safety references</h2><p>Material technical, safety, moisture, and code statements in this guide were checked against the following primary sources.</p><ol>{post.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer"><strong>{source.title}</strong><span>{source.publisher}</span></a></li>)}</ol></section>}
+      {post.sources && <section className="article-sources" aria-labelledby="sources-title"><Eyebrow>Sources</Eyebrow><h2 id="sources-title">Technical and safety references</h2><p>Material technical and safety statements in this guide were checked against the following primary sources.</p><ol>{post.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer"><strong>{source.title}</strong><span>{source.publisher}</span></a></li>)}</ol></section>}
 
       <section className="article-services" aria-labelledby="related-services-title"><Eyebrow>Related services</Eyebrow><h2 id="related-services-title">Professional help for the next step</h2><div className="article-service-links">{relatedServices.map((service) => <Link href={`/services/${service.slug}`} key={service.slug}><strong>{service.title}</strong><span>{service.short}</span><em>Explore service <ArrowRight size={15}/></em></Link>)}</div></section>
 
@@ -97,7 +97,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <p className="article-updated">Last updated <time dateTime={post.dateModified}>{modified}</time>. General information only; actual HVAC conditions require property-specific evaluation.</p>
     </div></article>
 
-    <FAQSection items={articleFaqs} title={post.faqs ? "AC water leak questions" : "HVAC advice questions"} intro={post.faqs ? "Practical answers for protecting the property and choosing a safe next step." : undefined}/>
+    <FAQSection items={articleFaqs} title={post.faqTitle ?? "HVAC advice questions"} intro={post.faqIntro}/>
     <CTA dark title="Need professional HVAC help?" text={`Hot & Cool Services serves Manassas, Northern Virginia, Maryland, and Washington, DC. Call ${site.phone} or request service online.`}/>
     <JsonLd data={{
       "@context": "https://schema.org",
