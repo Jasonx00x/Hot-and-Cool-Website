@@ -31,9 +31,166 @@ const articleImages = {
   maintenance: "https://res.cloudinary.com/kw3mrd3f/image/upload/f_auto,q_auto,w_1600,h_900,c_fill,g_auto/v1785417895/IMG_1617_wsvjbw.webp",
   service: "https://res.cloudinary.com/kw3mrd3f/image/upload/f_auto,q_auto,w_1600,h_900,c_fill,g_auto/v1785417874/IMG_1735_cecdax.webp",
   property: "https://res.cloudinary.com/kw3mrd3f/image/upload/f_auto,q_auto,w_1600,h_900,c_fill,g_auto/v1785525538/IMG_5519_bgtglj.webp",
+  heating: "https://res.cloudinary.com/kw3mrd3f/image/upload/f_auto,q_auto,w_1600,h_900,c_fill,g_auto/v1785417209/IMG_9936_aax5dw.webp",
 };
 
 export const blogs: BlogPost[] = [
+  {
+    slug: "furnace-carbon-monoxide-safety-checklist",
+    title: "Before You Turn On the Heat: Furnace and Carbon Monoxide Safety Checklist",
+    seoTitle: "Furnace Safety Checklist for VA, DC & MD Homes",
+    description: "Use this furnace and carbon monoxide safety checklist before heating season, including alarm checks, first-start warning signs, and when to leave.",
+    date: "2026-09-23",
+    dateModified: "2026-09-23",
+    readTime: "13 min read",
+    category: "Furnace and carbon monoxide safety",
+    focusKeyword: "furnace safety checklist",
+    keywords: ["furnace safety checklist", "carbon monoxide furnace safety", "turning on furnace for first time", "heater smells when first turned on", "fall furnace maintenance", "heating safety Northern Virginia"],
+    image: articleImages.heating,
+    imageAlt: "Hot & Cool Services technician inspecting the internal components of a residential gas furnace",
+    quickAnswer: "Before the first cold night, identify whether your home uses a gas or oil furnace, electric furnace, or heat pump; test every carbon monoxide alarm according to its manufacturer instructions; check the accessible filter and keep supply, return, combustion-air, and vent areas unobstructed; then arrange qualified service for fuel-burning heating equipment. If a CO alarm sounds, anyone has possible CO symptoms, or you smell natural gas, get everyone outside immediately and call 911 or the fire department from a safe location. Do not search for the leak, reset the alarm and stay inside, or open a furnace cabinet.",
+    intro: "The first chilly morning is a bad time to discover that a furnace will not start—or that a safety alarm is missing, expired, or ignored. Homes across Northern Virginia, Washington, DC, and Maryland use a mix of gas furnaces, oil systems, electric furnaces, heat pumps, fireplaces, and shared mechanical rooms. That distinction matters: carbon monoxide is produced by fuel-burning equipment, while an all-electric heat pump does not create CO at the indoor unit. Even an all-electric home can still have other CO sources, such as an attached garage or improperly used generator. This pre-season checklist helps homeowners and property managers prepare without turning a safety inspection into a risky do-it-yourself project.",
+    sections: [
+      {
+        heading: "Start with the emergency rules—not the thermostat",
+        body: [
+          "Carbon monoxide, or CO, is colorless and odorless. You cannot use smell, sight, or the apparent condition of a furnace to decide that the air is safe. The Centers for Disease Control and Prevention lists headache, dizziness, weakness, upset stomach, vomiting, chest pain, and confusion among common symptoms. People who are sleeping, older adults, infants, and people with certain heart, blood, or breathing conditions can face particular risk, but anyone can be poisoned.",
+          "If a CO alarm sounds or several people develop compatible symptoms—especially when symptoms improve outside—move everyone, including pets, into fresh air immediately. Call 911 or the fire department from outside and follow their instructions. Do not remain indoors to open windows, locate the source, silence and reset the alarm, or finish a checklist. Do not re-enter until emergency responders say it is safe. Seek medical guidance for possible exposure; an HVAC appointment is not a substitute for emergency evaluation.",
+          "Natural gas has an added odorant, often described as sulfur-like or rotten eggs, but that is a gas-leak warning—not the smell of CO. Washington Gas instructs customers who smell natural gas or hear blowing or hissing to leave immediately, avoid creating ignition sources, and call 911 and the gas utility from a safe location. Do not operate switches, phones, appliances, vehicles, or flames in or near the suspected leak area."
+        ],
+        bullets: [
+          "CO alarm or possible CO symptoms: get outside, call 911 or the fire department, and wait for clearance",
+          "Natural-gas odor or hissing: leave without operating switches or devices; call from a safe distance",
+          "Smoke, flame, scorching, or an active electrical event: leave and call 911",
+          "Never use an oven, grill, or unvented outdoor appliance to heat an indoor space",
+          "Never bypass a safety control or keep restarting equipment that shuts down"
+        ]
+      },
+      {
+        heading: "Identify what actually heats the property",
+        body: [
+          "Before applying furnace advice, determine the equipment and fuel type from normal documentation: a recent service record, equipment proposal, property asset list, utility account, or label visible without removing a panel. A gas or oil furnace burns fuel and distributes warmed air through ducts. An electric furnace warms air with electric resistance elements. A heat pump moves heat and may use electric auxiliary heat, while some dual-fuel systems pair a heat pump with a gas furnace. Boilers and fireplaces have different components and service needs.",
+          "Do not infer the fuel from the thermostat or outdoor unit alone. A house can have a heat-pump outdoor unit and a fuel-burning backup furnace, and a multifamily building may contain both in-unit and shared equipment. CDC guidance to have gas-, oil-, or coal-burning appliances serviced annually applies to combustion equipment. CO alarms still make sense wherever other possible sources exist, including an attached garage, fireplace, water heater, neighboring unit, or portable generator used outside too close to the building.",
+          "Property managers should keep a unit-by-unit equipment list that records fuel, model and serial information, filter size, thermostat type, vent route where known, alarm responsibility, last service date, resident access notes, and open repair items. That small amount of documentation prevents a generic seasonal work order from overlooking a fuel-burning appliance or a shared venting concern."
+        ]
+      },
+      {
+        heading: "Check every carbon monoxide alarm before heating season",
+        body: [
+          "CPSC recommends CO alarms on every level of a home and outside sleeping areas. Local laws, adopted codes, lease requirements, and the alarm manufacturer may require additional locations or different placement, so treat the national guidance as a baseline—not a substitute for the instructions supplied with the alarm. Do not place an alarm merely where it is convenient; distance from fuel-burning appliances, wall or ceiling placement, and avoidance of humid or dead-air locations can vary by model.",
+          "Press each alarm's test button and confirm that occupants can hear it from sleeping rooms. Follow the manufacturer schedule for batteries, sensor end-of-life, cleaning, and full-unit replacement. CPSC advises monthly tests and annual battery replacement, while sealed-battery units and manufacturer instructions may differ. An end-of-life chirp is not the same as a CO alarm pattern; use the label or manual to identify the signal rather than guessing or removing the battery.",
+          "An alarm is an essential warning device, not proof that a furnace is safe. Consumer CO alarms are designed to activate under defined conditions; they do not inspect combustion, venting, gas pressure, a heat exchanger, or every possible low-level exposure. Keep alarms in service and arrange professional evaluation of the fuel-burning system. One safeguard does not replace the other."
+        ],
+        bullets: [
+          "Locate an alarm on every level and outside each sleeping area, then check local and manufacturer requirements",
+          "Use the test button monthly and confirm the sound is audible where people sleep",
+          "Replace batteries and the complete alarm on the schedule stated by the manufacturer",
+          "Record alarm locations, model numbers, installation dates, and test dates for rentals or managed properties",
+          "Provide accessible alerting equipment where an occupant cannot reliably hear a standard alarm"
+        ]
+      },
+      {
+        heading: "Make only low-risk checks before the first start",
+        body: [
+          "A homeowner checklist should stay outside the furnace cabinet. Confirm that the thermostat is in Heat mode, has a reasonable setpoint, and shows no obvious low-battery or service message. Check the air filter only if it is in a normal user-access location, and use the size and type specified for the system. Keep supply registers and return grilles open and free of furniture, rugs, boxes, and heavy curtains.",
+          "Look around the equipment without touching piping, wiring, vent connectors, or controls. Remove stored paper, paint, cleaning products, gasoline, and other combustibles from the mechanical area. Do not block louvers, transfer grilles, or other openings that may supply combustion or ventilation air. From a safe floor area, note visible rust, staining, soot, water, disconnected-looking vent sections, damaged wiring, or construction debris, then leave evaluation to a qualified professional.",
+          "Do not remove an access panel, clean a burner, adjust a gas valve, relight an unfamiliar pilot, tape a vent joint, insert a camera into the equipment, or test for a cracked heat exchanger yourself. These steps can expose live electrical parts, hot surfaces, fuel, sharp metal, and combustion products. Manufacturer instructions and property-specific conditions control the safe procedure."
+        ]
+      },
+      {
+        heading: "Know which first-start smells and sounds require action",
+        body: [
+          "A brief dusty smell can occur when settled dust on warm surfaces is heated after a long shutdown. That possibility should never be used to dismiss a gas-like odor, smoke, visible scorching, a CO alarm, or a strong or persistent burning smell. If you cannot confidently classify an odor, shut the system off from the thermostat if that can be done safely, leave when any emergency sign is present, and request professional guidance.",
+          "Watch from occupied space rather than standing over the equipment. Note whether the thermostat calls for heat, the system starts, warm air eventually reaches registers, and the cycle stops normally. Some heat pumps deliver air that feels less hot than furnace air and may enter a temporary defrost cycle; that is a separate operating pattern and not evidence by itself of furnace trouble. Record the time, thermostat setting, displayed messages, odor description, alarm behavior, rooms affected, and whether the system repeated the cycle.",
+          "Call for heating repair when the system will not start, repeatedly starts and stops, trips a breaker, produces new grinding or banging, blows persistently cool air when a furnace should be heating, or gives off a burning odor that does not clear promptly. Use emergency procedures—not a routine repair request—for gas odor, a CO alarm, smoke, or possible exposure symptoms."
+        ],
+        subsections: [
+          {
+            heading: "What to document for the service call",
+            body: "Useful observations include the equipment and fuel type, thermostat mode and setpoint, when the last normal heating cycle occurred, the exact alarm or fault message, whether the issue affects one unit or several, and any recent renovation, outage, vacancy, or equipment work. Photos of the thermostat and the outside of the equipment can help, but never enter a restricted mechanical room or remove a panel to get one."
+          }
+        ]
+      },
+      {
+        heading: "Schedule qualified service for fuel-burning heating equipment",
+        body: [
+          "CDC and CPSC both recommend annual qualified service or inspection for fuel-burning heating systems, and CPSC includes chimneys and vents in that preparation. ENERGY STAR recommends a professional heating check in the fall and identifies gas or oil connections, gas pressure, burner combustion, and the heat exchanger among heating-specific items. The exact scope must match the system, manufacturer instructions, fuel, venting method, and observed condition.",
+          "A useful visit should establish more than whether heat comes out of a register. Depending on the equipment, the technician may review the call for heat, startup and shutdown sequence, safety controls, electrical connections, filter and airflow condition, burner operation, combustion and venting, visible equipment condition, thermostat response, and documented fault history. No single test, alarm reading, or visual glance proves that every component is sound.",
+          "Maintenance is not a promise against future failure, and it is not the same as repairing an active problem. Tell the scheduler about odors, alarms, shutdowns, water, noise, repeated cycling, prior gas-utility or fire-department response, and occupied-unit constraints. That information helps the company prepare for the right type of visit."
+        ]
+      },
+      {
+        heading: "Use a stronger checklist for apartments and managed properties",
+        body: [
+          "In apartments, condominiums, rowhouses, and mixed-use properties, the source may not be inside the reporting unit. Shared shafts, attached garages, central plants, neighboring appliances, and common venting can change the response. Residents should use the property’s emergency process after getting to safety and calling emergency services when appropriate; management notification must not delay evacuation or a 911 call.",
+          "Before seasonal startup, property teams can reconcile alarm and equipment inventories, close unresolved no-heat or venting work orders, confirm access and resident-notice procedures, review vacant units, and plan escalation for after-hours alarm reports. Contractors should receive correct unit numbers, equipment locations, keys or escorts, parking and roof-access rules, and a contact who can authorize the agreed scope.",
+          "After service, retain the date, equipment served, observations, measurements or tests provided, work performed, parts installed, unresolved recommendations, and the person responsible for follow-up. Do not describe a building as 'CO-free' or 'safe for the season' based only on one alarm test or one completed unit. Records should say what was actually inspected and what remains open."
+        ],
+        bullets: [
+          "Confirm alarm responsibility and document tests without disabling occupied-unit protection",
+          "Track fuel-burning equipment, shared vents, attached garages, and access-controlled mechanical rooms",
+          "Give residents plain-language emergency instructions before the first cold spell",
+          "Separate emergency alarm response, active repair, and routine seasonal maintenance work orders",
+          "Escalate recurring alarms or symptoms across more than one unit as a building-level concern"
+        ]
+      },
+      {
+        heading: "Prepare now for the first cold nights in VA, DC, and Maryland",
+        body: [
+          "Late September and early fall are useful times to test alarms, identify equipment, and schedule heating service before the first sustained cold stretch. Waiting for a freeze can turn a planned visit into an urgent no-heat call, especially when a property team must coordinate access across many units. The calendar alone does not make equipment safe, but it creates time to resolve findings before heat is essential.",
+          "Hot & Cool Services provides heating repair and HVAC maintenance for homes, apartments, commercial spaces, and managed properties across Manassas and Northern Virginia, Washington, DC, and nearby Maryland. If you have an active CO alarm, suspected gas leak, smoke, fire, or possible exposure symptoms, leave and call emergency services first. For non-emergency seasonal preparation or heating problems, request service with the equipment type, property address, symptoms, and access details."
+        ]
+      }
+    ],
+    relatedServices: ["heating-repair", "hvac-maintenance", "apartment-hvac"],
+    faqTitle: "Furnace and carbon monoxide safety questions",
+    faqIntro: "Use these answers for pre-season planning. An active alarm, gas odor, smoke, or possible exposure symptoms requires immediate emergency action.",
+    faqs: [
+      {
+        question: "What should I do if my carbon monoxide alarm goes off?",
+        answer: "Move everyone and pets outside into fresh air immediately, call 911 or the fire department from outside, and follow responder instructions. Do not reset the alarm and remain indoors, search for the source, or re-enter until emergency responders say it is safe. Seek medical guidance for possible exposure."
+      },
+      {
+        question: "Is a burning smell normal the first time I turn on the furnace?",
+        answer: "A brief dusty odor can occur after a long shutdown, but smell cannot prove the system is safe. Shut the system off and request guidance if the odor is strong, persistent, electrical, smoky, or unfamiliar. For gas odor, smoke, a CO alarm, or possible CO symptoms, leave immediately and call emergency services from a safe location."
+      },
+      {
+        question: "Where should carbon monoxide alarms be installed?",
+        answer: "CPSC recommends CO alarms on every level and outside sleeping areas. Follow the alarm manufacturer’s placement instructions plus applicable local code, law, and lease requirements, which may require other locations. Test alarms monthly and replace batteries or complete units according to their instructions."
+      },
+      {
+        question: "Do I need a CO alarm if my home has a heat pump?",
+        answer: "An all-electric heat pump does not create CO at the indoor unit, but the property may still have another source: a gas or oil backup furnace, fuel-burning water heater, fireplace, attached garage, generator, neighboring unit, or shared system. Identify every appliance and follow local requirements rather than deciding from the thermostat alone."
+      },
+      {
+        question: "Does a working CO alarm mean my furnace is safe?",
+        answer: "No. A CO alarm is a vital warning device, but it does not inspect the furnace, combustion, venting, gas pressure, heat exchanger, or safety controls. Keep alarms working and have fuel-burning heating equipment serviced by a qualified technician as recommended."
+      },
+      {
+        question: "What can I safely check before calling for furnace service?",
+        answer: "From normal occupied areas, confirm the thermostat mode and setpoint, check an accessible filter, uncover supply and return grilles, remove combustible storage from around the equipment, and record visible symptoms. Do not open panels, adjust fuel or electrical components, relight an unfamiliar pilot, or alter venting."
+      }
+    ],
+    internalLinks: [
+      { title: "Heating repair", description: "Request diagnosis for no heat, repeated cycling, unusual sounds or odors, and other non-emergency heating faults.", href: "/services/heating-repair" },
+      { title: "HVAC maintenance", description: "Plan seasonal service for heating controls, airflow, operating condition, and system-specific safety checks.", href: "/services/hvac-maintenance" },
+      { title: "Apartment and multifamily HVAC", description: "Coordinate access, unit-level service, recurring work, and property communication across multifamily buildings.", href: "/services/apartment-hvac" },
+      { title: "Northern Virginia service area", description: "See heating and cooling support in Manassas, Fairfax, Arlington, Alexandria, and nearby communities.", href: "/service-areas/northern-virginia" },
+      { title: "Washington, DC HVAC service", description: "Explore residential, commercial, and managed-property HVAC support in Washington, DC.", href: "/service-areas/washington-dc" },
+      { title: "Rockville and Montgomery County service", description: "Review HVAC service for homes and properties in nearby Maryland communities.", href: "/service-areas/rockville-md" },
+      { title: "How often to schedule HVAC maintenance", description: "Compare seasonal planning with the different response required for an active heating fault or safety warning.", href: "/blog/how-often-should-hvac-maintenance-be-scheduled" },
+      { title: "Heat pump vs. furnace", description: "Identify how heat pumps and furnaces differ before applying fuel-burning equipment guidance.", href: "/blog/heat-pump-vs-furnace-northern-virginia" },
+      { title: "Hot & Cool project experience", description: "View examples of HVAC work for apartment communities and commercial properties across the region.", href: "/projects" }
+    ],
+    sources: [
+      { title: "Carbon Monoxide Poisoning Basics", publisher: "Centers for Disease Control and Prevention", url: "https://www.cdc.gov/carbon-monoxide/about/" },
+      { title: "Carbon Monoxide Furnace Safety Fact Sheet", publisher: "Centers for Disease Control and Prevention", url: "https://www.cdc.gov/carbon-monoxide/media/pdfs/furnace.pdf" },
+      { title: "Protect Your Family from Carbon Monoxide Poisoning", publisher: "U.S. Consumer Product Safety Commission", url: "https://www.cpsc.gov/safety-education/safety-education-centers/carbon-monoxide-information-center/protect-your-family-from-carbon-monoxide-poisoning--" },
+      { title: "CO Alarms", publisher: "U.S. Consumer Product Safety Commission", url: "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center/CO-Alarms" },
+      { title: "Heating and Cooling Maintenance Checklist", publisher: "ENERGY STAR / U.S. Environmental Protection Agency", url: "https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist" },
+      { title: "Natural Gas Safety", publisher: "Washington Gas", url: "https://www.washingtongas.com/safety-education/safety/natural-gas-safety" }
+    ]
+  },
   {
     slug: "one-room-hotter-than-rest-of-house",
     title: "Why Is One Room Hotter Than the Rest of the House?",
