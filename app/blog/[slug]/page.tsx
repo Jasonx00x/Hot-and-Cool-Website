@@ -55,7 +55,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const published = new Date(`${post.date}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   const modified = new Date(`${post.dateModified}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   const relatedServices = post.relatedServices.map((serviceSlug) => serviceBySlug[serviceSlug]).filter(Boolean);
-  const relatedPosts = blogs.filter((candidate) => candidate.slug !== post.slug).slice(0, 3);
+  const curatedRelatedPosts = post.relatedPostSlugs?.map((relatedSlug) => blogBySlug[relatedSlug]).filter(Boolean) ?? [];
+  const relatedPosts = (curatedRelatedPosts.length ? curatedRelatedPosts : blogs.filter((candidate) => candidate.slug !== post.slug)).slice(0, 3);
   const articleFaqs = post.faqs ?? blogFaqs;
   const wordCount = [
     post.quickAnswer,
