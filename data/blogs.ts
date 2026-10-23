@@ -40,36 +40,36 @@ export const blogs: BlogPost[] = [
     slug: "heat-pump-blowing-cold-air-heat-mode",
     title: "Why Is My Heat Pump Blowing Cold Air in Heat Mode?",
     seoTitle: "Heat Pump Blowing Cold Air? Defrost vs. Repair | VA, DC & MD",
-    description: "Learn when cool air or frost can be normal during heat-pump operation, what warning signs point to a fault, and when to call for service in VA, DC, or MD.",
-    date: "2026-10-09",
-    dateModified: "2026-10-09",
-    readTime: "12 min read",
+    description: "See why a heat pump may blow cool air in heat mode, how defrost works, which checks are safe, and when the system needs professional diagnosis.",
+    date: "2026-10-23",
+    dateModified: "2026-10-23",
+    readTime: "9 min read",
     category: "Heat pump troubleshooting",
     focusKeyword: "heat pump blowing cold air",
     keywords: ["heat pump blowing cold air", "heat pump not heating", "heat pump defrost mode", "heat pump outdoor unit frozen", "auxiliary heat vs emergency heat", "heat pump repair Northern Virginia"],
-    image: articleImages.cooling,
-    imageAlt: "Two Hot & Cool Services technicians unloading HVAC equipment beside a branded service van",
-    quickAnswer: "Cool-feeling air does not always mean a heat pump has failed. A heat pump can deliver air that feels less hot than furnace air, the indoor fan can circulate room-temperature air between heating calls, and a brief defrost cycle can temporarily change what you feel at the register. The key question is whether the home is holding the thermostat setpoint and the system returns to normal heating. Confirm Heat mode, set the fan to Auto, check an accessible filter and open grilles, and note any thermostat message or outdoor-unit frost. Call for diagnosis when cool air persists, the indoor temperature keeps falling, heavy ice does not clear, a breaker trips, or a new electrical or mechanical symptom appears.",
-    intro: "A heat pump may be operating normally even when the air at a register does not feel as hot as furnace air. It may also pause ordinary heating while the outdoor coil defrosts. Those normal patterns can feel similar to a real loss of heat, so the useful distinction is not simply “warm air versus cold air.” It is whether the property maintains temperature, whether the system returns to normal operation, and whether warning signs such as persistent ice, repeated breaker trips, or unusual sounds appear. This guide helps homeowners and property teams in Northern Virginia, Washington, DC, and nearby Maryland document the symptom safely and decide when heating repair is the right next step.",
+    image: "/images/blog/heat-pump-defrost-cold-air-guide.webp",
+    imageAlt: "Residential air-source heat pump releasing a small plume of water vapor during a light-frost defrost cycle",
+    quickAnswer: "Cool-feeling air can happen during normal heat-pump operation. The supply air may feel less hot than furnace air, the indoor fan may circulate room-temperature air between heating calls, and a short defrost cycle can temporarily change what you feel at the register. Watch whether the home holds the thermostat setpoint and whether the system returns to steady heating. Confirm Heat mode, set the fan to Auto, check an accessible filter and open grilles, and note any thermostat message or outdoor-unit frost. Call for diagnosis when cool air persists, the indoor temperature keeps falling, heavy ice does not clear, a breaker trips, or a new electrical or mechanical symptom appears.",
+    intro: "Heat-pump air often feels less hot than furnace air, even while it warms the home. The system may also pause ordinary heating while the outdoor coil defrosts. The thermostat trend, the length of the change, and any warning signs help separate normal operation from a loss of heat. Homeowners and property teams in Northern Virginia, Washington, DC, and nearby Maryland can use this guide to document the symptom safely and decide when to request heating repair.",
     sections: [
       {
         heading: "First confirm that the equipment is a heat pump",
         body: [
-          "An outdoor unit that resembles an air conditioner is not enough to identify the system. Check a recent service record, installation proposal, property equipment list, or manufacturer label that is visible without removing a panel. A thermostat may display AUX or Emergency Heat on many heat-pump systems, but labels and backup-heat arrangements vary, so the thermostat alone should not be treated as proof.",
-          "The distinction matters because a heat pump moves heat through a refrigeration cycle, while a furnace produces heat and has different operating and safety concerns. Some properties use a dual-fuel system that pairs a heat pump with a gas furnace. If you cannot identify the equipment, record the indoor and outdoor model numbers from accessible labels and ask the service company or property manager rather than opening a cabinet."
+          "An outdoor unit can look like an air conditioner, so check a recent service record, installation proposal, property equipment list, or manufacturer label that is visible without removing a panel. Many heat-pump thermostats display AUX or Emergency Heat, but labels and backup-heat arrangements vary. The thermostat display alone cannot confirm the equipment type.",
+          "A heat pump moves heat through a refrigeration cycle. A furnace produces heat and has different operating and safety concerns. Some properties use a dual-fuel system that pairs both types. If you cannot identify the equipment, record the indoor and outdoor model numbers from accessible labels and ask the service company or property manager. Leave the cabinet closed."
         ]
       },
       {
         heading: "Cooler-feeling air can still be normal heat-pump operation",
         body: [
-          "A heat pump transfers heat from outdoors to indoors instead of creating a very hot combustion surface. Its supply air can therefore feel less hot against your skin than furnace air even while it is adding heat to the home. Air moving across skin can feel cool when its temperature is below body temperature, so touch alone is a poor test of heating performance.",
+          "A heat pump transfers outdoor heat into the home. It does not use the very hot combustion surface found in a furnace, so the supply air can feel less hot against your skin while it is still warming the room. Air movement also feels cool when it is below body temperature. Your hand at the register is a poor test of heating performance.",
           "Watch the room temperature and the pattern over time. If the thermostat is in Heat mode, the property holds the setpoint, and the system cycles or modulates normally, less-hot supply air may not indicate a fault. If the fan is set to On, it can also circulate room-temperature air between active heating calls. Setting the fan to Auto lets the controls decide when the blower should run for most systems. Follow the equipment and thermostat manuals when their instructions differ."
         ]
       },
       {
         heading: "A brief defrost cycle can change the air at the registers",
         body: [
-          "In cold, damp weather, moisture can freeze on an air-source heat pump's outdoor coil. The system periodically enters defrost mode to warm that coil and clear the frost. During that temporary operating change, the outdoor fan may stop, the sound may change, steam or water may appear outside, and some occupants may notice cooler indoor air. Systems with configured backup heat may use it during defrost, while other arrangements behave differently.",
+          "In cold, damp weather, moisture can freeze on an air-source heat pump's outdoor coil. The system periodically enters defrost mode to warm the coil and clear the frost. During that temporary change, the outdoor fan may stop, the sound may change, water vapor or water may appear outside, and some occupants may notice cooler indoor air. Systems with configured backup heat may use it during defrost. Other arrangements behave differently.",
           "A light frost that clears as the system completes its normal cycle is different from the outdoor unit becoming encased in heavy or persistent ice. Do not chip ice, pour hot water on the coil, block drainage, or force the controls into a test mode. Watch from a safe location and note whether the unit returns to heating and whether the indoor temperature recovers. Because defrost timing depends on the equipment, controls, and conditions, there is no universal duration that proves a cycle is normal."
         ]
       },
@@ -92,22 +92,22 @@ export const blogs: BlogPost[] = [
         heading: "Know when cool air points to a repair problem",
         body: [
           "Request professional diagnosis when the property keeps losing temperature, cool air continues through active heating calls, the system cannot reach or maintain the setpoint, or heavy ice remains on the outdoor unit. Weak airflow, repeated starts and stops, an outdoor fan or compressor that behaves abnormally, frequent fault messages, and auxiliary heat behavior that is new or unexplained are also useful reasons to call.",
-          "A technician may need to separate thermostat or control problems from restricted airflow, defrost-control or sensor faults, reversing-valve operation, refrigerant-side performance, outdoor-unit drainage or airflow, and the configured backup-heat system. Those branches can look similar from a register, and no single visible symptom proves which component has failed.",
-          "Treat smoke, scorching, a strong electrical or burning odor, or a repeatedly tripping breaker as a reason to stop operating the system and get prompt professional or emergency guidance. If the property has fuel-burning backup heat and you smell natural gas, a carbon monoxide alarm sounds, or anyone has possible exposure symptoms, leave and follow emergency procedures rather than continuing to troubleshoot."
+          "A technician may need to separate thermostat or control problems from restricted airflow, defrost-control or sensor faults, reversing-valve operation, refrigerant-side performance, outdoor-unit drainage or airflow, and the configured backup-heat system. Several faults can feel the same at a register, and a visible symptom cannot identify the failed component by itself.",
+          "Treat smoke, scorching, a strong electrical or burning odor, or a repeatedly tripping breaker as a reason to stop operating the system and get prompt professional or emergency guidance. If the property has fuel-burning backup heat and you smell natural gas, a carbon monoxide alarm sounds, or anyone has possible exposure symptoms, stop troubleshooting, leave, and follow emergency procedures."
         ]
       },
       {
-        heading: "Auxiliary heat and emergency heat are not the same control",
+        heading: "How auxiliary heat and emergency heat work differently",
         body: [
-          "Auxiliary heat is a supplemental heat source that the thermostat or system controls can call automatically. Depending on the installation, it may be electric resistance heat or a fuel-burning furnace in a dual-fuel system. It can operate during defrost, during recovery from a larger setpoint change, or when the heat pump alone is not meeting the building's heating demand. A brief AUX indication is not automatically evidence of failure.",
-          "Emergency Heat is typically a manual thermostat mode that disables normal heat-pump operation and relies on the configured backup source. It is not a general test, a shortcut for faster heating, or a setting every occupant should activate when air feels cool. Labels and control logic vary, so follow the thermostat and equipment manuals or professional direction. If the primary heat pump appears to have failed, call for service and ask how the property should be operated while waiting."
+          "Auxiliary heat is a supplemental source that the thermostat or system controls can call automatically. Depending on the installation, it may be electric resistance heat or a fuel-burning furnace in a dual-fuel system. It may operate during defrost, while recovering from a large setpoint change, or when the heat pump cannot meet the building's heating demand on its own. A brief AUX indication can be normal.",
+          "Emergency Heat is typically a manual thermostat mode that disables normal heat-pump operation and relies on the configured backup source. Do not use it as a general test or a shortcut for faster heating. Labels and control logic vary, so follow the thermostat and equipment manuals or professional direction. If the primary heat pump appears to have failed, call for service and ask how to operate the property while waiting."
         ]
       },
       {
         heading: "What a technician may evaluate",
         body: [
           "A useful diagnosis starts with the symptom history and the system's actual operation. The technician may review thermostat calls and configuration, indoor and outdoor electrical operation, airflow and filter condition, temperature response, fault history, defrost controls and sensors, reversing-valve operation, refrigerant-side measurements, outdoor-coil condition, and the setup of electric or dual-fuel backup heat.",
-          "The correct next step could be a control correction, airflow repair, defrost-system repair, electrical work, refrigerant-side diagnosis, backup-heat correction, or another property-specific action. Routine maintenance is valuable for seasonal condition checks, but an active loss of heat, persistent ice, or electrical symptom should be scheduled as a repair concern so the service team can prepare appropriately."
+          "The findings determine the next step. It may involve the controls, airflow, defrost system, electrical components, refrigerant circuit, backup heat, or another property-specific condition. Routine maintenance covers seasonal condition checks. Schedule an active loss of heat, persistent ice, or electrical symptom as a repair concern so the service team can prepare for the complaint."
         ]
       },
       {
@@ -120,7 +120,7 @@ export const blogs: BlogPost[] = [
       {
         heading: "Choose the next step for heat-pump trouble in VA, DC, and Maryland",
         body: [
-          "If the home holds temperature and the system returns to normal after a brief operating change, continue monitoring and record the pattern for the next maintenance visit. If indoor temperature keeps falling, cool air persists, heavy ice does not clear, or another fault sign appears, schedule heating repair rather than trying to identify a failed part from the register.",
+          "If the home holds temperature and the system returns to normal after a brief operating change, continue monitoring and record the pattern for the next maintenance visit. If indoor temperature keeps falling, cool air persists, heavy ice does not clear, or another fault sign appears, schedule heating repair. The feeling at one register cannot identify the failed part.",
           "Hot & Cool Services provides heating repair for homes, apartments, businesses, and managed properties across Manassas and Northern Virginia, Washington, DC, and nearby Maryland communities. Share the equipment type if known, thermostat display, temperature trend, outdoor-unit observations, and property access details when requesting service."
         ]
       }
@@ -131,7 +131,7 @@ export const blogs: BlogPost[] = [
     faqs: [
       {
         question: "Why does heat-pump air feel cooler than furnace air?",
-        answer: "A heat pump moves heat rather than creating the very hot output associated with many furnaces, so its supply air may feel less hot against your skin while it is still warming the home. Check whether the indoor temperature holds the setpoint instead of judging performance by touch alone."
+        answer: "A heat pump transfers heat into the home without the very hot combustion surface found in many furnaces. Its supply air may feel less hot against your skin while it still warms the room. Check whether the indoor temperature holds the setpoint; touch alone is a poor measure of performance."
       },
       {
         question: "Does a heat pump blow cool air during defrost mode?",
@@ -143,7 +143,7 @@ export const blogs: BlogPost[] = [
       },
       {
         question: "What is the difference between auxiliary heat and emergency heat?",
-        answer: "Auxiliary heat is supplemental heat that system controls can call automatically. Emergency Heat is usually a manual mode that disables normal heat-pump operation and relies on the backup source. Because equipment and thermostat controls vary, use the manual or professional direction rather than switching modes as a general test."
+        answer: "Auxiliary heat is supplemental heat that system controls can call automatically. Emergency Heat is usually a manual mode that disables normal heat-pump operation and relies on the backup source. Equipment and thermostat controls vary, so follow the manual or professional direction. Do not switch modes as a general test."
       },
       {
         question: "When should I call for heat-pump repair?",
@@ -155,12 +155,13 @@ export const blogs: BlogPost[] = [
       { title: "HVAC maintenance", description: "Plan seasonal condition checks when the system is operating normally and no active repair symptom is present.", href: "/services/hvac-maintenance" },
       { title: "Heat pump vs. furnace", description: "Compare how heat pumps and furnaces create and deliver heat before making a replacement decision.", href: "/blog/heat-pump-vs-furnace-northern-virginia" },
       { title: "Furnace and carbon monoxide safety", description: "Use the separate emergency guidance for fuel-burning backup heat, gas odor, carbon monoxide alarms, or possible exposure symptoms.", href: "/blog/furnace-carbon-monoxide-safety-checklist" },
-      { title: "One room hotter than the rest", description: "Follow the room-by-room airflow guide when the comfort problem is isolated instead of affecting the whole property.", href: "/blog/one-room-hotter-than-rest-of-house" },
+      { title: "One room hotter than the rest", description: "Follow the room-by-room airflow guide for a comfort problem isolated to one room or part of the property.", href: "/blog/one-room-hotter-than-rest-of-house" },
       { title: "Northern Virginia service area", description: "Review heating and cooling support for Manassas, Fairfax, Arlington, Alexandria, and nearby communities.", href: "/service-areas/northern-virginia" }
     ],
     relatedPostSlugs: ["heat-pump-vs-furnace-northern-virginia", "furnace-carbon-monoxide-safety-checklist", "one-room-hotter-than-rest-of-house"],
     sources: [
-      { title: "How Does a Heat Pump Work?", publisher: "ENERGY STAR / U.S. Environmental Protection Agency", url: "https://www.energystar.gov/products/ask-the-experts/how-does-heat-pump-work" },
+      { title: "Heat Pumps", publisher: "U.S. Department of Energy", url: "https://www.energy.gov/heat-pumps" },
+      { title: "Air-Source Heat Pumps", publisher: "ENERGY STAR / U.S. Environmental Protection Agency", url: "https://www.energystar.gov/products/air_source_heat_pumps" },
       { title: "Heat Pump Troubleshooting Guide", publisher: "Carrier", url: "https://www.carrier.com/us/en/residential/hvac-resources/heat-pumps/heat-pump-troubleshooting/" },
       { title: "What Is the Heat Pump Defrost Cycle?", publisher: "Trane", url: "https://www.trane.com/residential/en/resources/blog/what-is-heat-pump-defrost-cycle/" },
       { title: "What Is Auxiliary Heat?", publisher: "Carrier", url: "https://www.carrier.com/us/en/residential/hvac-resources/what-is-auxiliary-heat/" }

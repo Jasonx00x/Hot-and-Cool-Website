@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogBySlug[slug];
   if (!post) return {};
   const url = `${site.url}/blog/${post.slug}`;
+  const imageUrl = post.image.startsWith("http") ? post.image : `${site.url}${post.image}`;
   return {
     title: post.seoTitle,
     description: post.description,
@@ -42,9 +43,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       authors: [site.name],
       section: post.category,
       tags: post.keywords,
-      images: [{ url: post.image, width: 1600, height: 900, alt: post.imageAlt }],
+      images: [{ url: imageUrl, width: 1600, height: 900, alt: post.imageAlt }],
     },
-    twitter: { card: "summary_large_image", title: post.seoTitle, description: post.description, images: [post.image] },
+    twitter: { card: "summary_large_image", title: post.seoTitle, description: post.description, images: [imageUrl] },
   };
 }
 
@@ -69,6 +70,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     ...articleFaqs.flatMap((faq) => [faq.question, faq.answer]),
   ].join(" ").split(/\s+/).length;
   const articleUrl = `${site.url}/blog/${post.slug}`;
+  const imageUrl = post.image.startsWith("http") ? post.image : `${site.url}${post.image}`;
 
   return <>
     <section className="page-hero article-hero"><div className="container post">
@@ -107,7 +109,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       headline: post.title,
       alternativeHeadline: post.seoTitle,
       description: post.description,
-      image: [post.image],
+      image: [imageUrl],
       datePublished: isoDate(post.date),
       dateModified: isoDate(post.dateModified),
       inLanguage: "en-US",
