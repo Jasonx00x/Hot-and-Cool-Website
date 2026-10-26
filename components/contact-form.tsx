@@ -2,6 +2,7 @@
 
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { useState } from "react";
+import { trackConversion } from "@/lib/tracking";
 
 export function ContactForm() {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -15,6 +16,7 @@ export function ContactForm() {
       const response = await fetch("/__forms.html", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
       if (!response.ok) throw new Error();
       setState("sent");
+      trackConversion("generate_lead", { contact_method: "form", form_name: "service-request" });
       form.reset();
     } catch {
       setState("error");

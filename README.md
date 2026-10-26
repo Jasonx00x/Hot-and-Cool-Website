@@ -23,6 +23,14 @@ The request form uses Netlify Forms. `public/__forms.html` provides the static f
 
 Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in Netlify environment variables to enable Google Analytics. The analytics component renders nothing when the variable is missing.
 
+Conversion events are `phone_click` for a telephone link click and `generate_lead` only after a service-request POST succeeds. A telephone click does not establish that a call connected or became a qualified lead. Events contain the contact method, the form name where applicable, and the page pathname; they do not include contact details, form text, or URL queries. A failed or blocked analytics script must not interrupt the service request.
+
+After adding the GA4 ID, check both events in DebugView/Realtime and mark `generate_lead` as a key event. Keep phone clicks separate from submitted enquiries. Evaluate lead quality and booked work using the actual service records. Do not treat GA4's automatic form interaction events as confirmed submissions.
+
+### Search Console baseline, October 26, 2026
+
+The uploaded web-search exports contain June 2–October 24, 2026: 26 clicks, 10,140 impressions, 0.256% CTR, and an impression-weighted average position of approximately 54.6. September 27–October 24 contains 8 clicks and 2,731 impressions. Query rows omit most clicks, so they cannot establish a complete branded/nonbranded split. Compare subsequent equal 28-day periods and prioritize US traffic to service and location pages, together with actual enquiries. Search Console's connected account currently reports `siteUnverifiedUser`; owner verification is required before using it for direct inspection and indexing requests.
+
 ## Netlify preview deployment
 
 1. Connect the repository to Netlify.
