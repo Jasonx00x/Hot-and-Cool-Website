@@ -21,7 +21,7 @@ The request form uses Netlify Forms. `public/__forms.html` provides the static f
 
 ## Analytics
 
-Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in Netlify environment variables to enable Google Analytics. The analytics component renders nothing when the variable is missing.
+The production site uses the owner-supplied public GA4 Measurement ID in `data/site.ts`. `NEXT_PUBLIC_GA_MEASUREMENT_ID` can override it at build time. Known non-production Netlify contexts skip Analytics so preview visits do not enter the production property. Measurement IDs are public website configuration, not credentials.
 
 Conversion events are `phone_click` for a telephone link click and `generate_lead` only after a service-request POST succeeds. A telephone click does not establish that a call connected or became a qualified lead. Events contain the contact method, the form name where applicable, and the page pathname; they do not include contact details, form text, or URL queries. A failed or blocked analytics script must not interrupt the service request.
 

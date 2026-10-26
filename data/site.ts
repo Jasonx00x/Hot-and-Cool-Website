@@ -1,6 +1,7 @@
 export const site = {
   name: "Hot & Cool Services",
   url: "https://hotandcoolservices.com",
+  analyticsMeasurementId: "G-PQH0CF3S2L",
   phone: "703-863-1011",
   phoneHref: "tel:+17038631011",
   email: "service@hotandcoolservices.com",
