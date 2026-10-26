@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { images, site } from "@/data/site";
-import { JsonLd } from "@/lib/seo";
+import { ConversionTracking } from "@/components/conversion-tracking";
+import { JsonLd, businessId } from "@/lib/seo";
 import { Analytics } from "@/components/analytics";
 import "./globals.css";
 
@@ -20,4 +21,4 @@ export const metadata: Metadata = {
     apple: images.favicon,
   },
 };
-export default function RootLayout({ children }: { children: ReactNode }) { return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><SiteHeader/><main id="main">{children}</main><SiteFooter/><a className="mobile-call" href={site.phoneHref}><span>Call now</span>{site.phone}</a><Analytics/><JsonLd data={{ "@context": "https://schema.org", "@type": "HVACBusiness", name: site.name, url: site.url, telephone: "+1-703-863-1011", areaServed: ["Northern Virginia", "Manassas, VA", "Washington, DC", "Maryland"], address: { "@type": "PostalAddress", addressLocality: "Manassas", addressRegion: "VA", addressCountry: "US" } }}/></body></html> }
+export default function RootLayout({ children }: { children: ReactNode }) { return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><SiteHeader/><main id="main">{children}</main><SiteFooter/><a className="mobile-call" href={site.phoneHref}><span>Call now</span>{site.phone}</a><Analytics/><ConversionTracking/><JsonLd data={{ "@context": "https://schema.org", "@type": "HVACBusiness", "@id": businessId, name: site.name, url: site.url, telephone: "+1-703-863-1011", areaServed: ["Northern Virginia", "Manassas, VA", "Washington, DC", "Maryland"], address: { "@type": "PostalAddress", addressLocality: "Manassas", addressRegion: "VA", addressCountry: "US" } }}/></body></html> }

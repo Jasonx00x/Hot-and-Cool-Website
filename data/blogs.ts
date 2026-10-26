@@ -692,7 +692,7 @@ export const blogs: BlogPost[] = [
     seoTitle: "7 Summer HVAC Tips for Northern Virginia Homes",
     description: "Use seven practical HVAC tips to improve cooling comfort, efficiency, and reliability during hot, humid Northern Virginia summers.",
     date: "2026-06-15",
-    dateModified: "2026-08-03",
+    dateModified: "2026-10-26",
     readTime: "9 min read",
     category: "Summer HVAC maintenance",
     focusKeyword: "summer HVAC tips Northern Virginia",
@@ -711,7 +711,11 @@ export const blogs: BlogPost[] = [
       { heading: "7. Schedule seasonal HVAC maintenance", body: "A professional tune-up can identify drainage trouble, dirty components, loose electrical connections, unusual wear, and other conditions that may affect summer reliability. The right maintenance schedule depends on equipment type, age, operating hours, and property needs, but planning before peak demand is usually easier than reacting during a heat wave." },
       { heading: "Summer HVAC help across Northern Virginia", body: "Hot & Cool Services provides AC repair, installation, and HVAC maintenance for homes, apartments, businesses, and managed properties in Manassas, Northern Virginia, nearby Maryland communities, and Washington, DC. If your system is already struggling, maintenance alone may not correct an active fault; request a diagnosis so the cause can be identified." },
     ],
-    relatedServices: ["hvac-maintenance", "ac-repair", "duct-cleaning"],
+    relatedServices: ["hvac-maintenance", "ac-repair", "ac-installation"],
+    internalLinks: [
+      { title: "Manassas HVAC service", description: "Request heating and cooling service for a Manassas home, business, or managed property.", href: "/service-areas/manassas-va" },
+      { title: "Northern Virginia service coverage", description: "Confirm the service region and discuss scheduling for your address.", href: "/service-areas/northern-virginia" }
+    ],
   },
   {
     slug: "how-often-should-hvac-maintenance-be-scheduled",
@@ -719,7 +723,7 @@ export const blogs: BlogPost[] = [
     seoTitle: "How Often to Schedule HVAC Maintenance in Virginia",
     description: "Learn when to schedule HVAC maintenance in Virginia, what affects service frequency, and what a seasonal heating or AC tune-up can help identify.",
     date: "2026-07-18",
-    dateModified: "2026-08-03",
+    dateModified: "2026-10-26",
     readTime: "8 min read",
     category: "HVAC maintenance",
     focusKeyword: "HVAC maintenance Northern Virginia",
@@ -737,6 +741,10 @@ export const blogs: BlogPost[] = [
       { heading: "HVAC maintenance for Northern Virginia properties", body: "Hot & Cool Services supports seasonal maintenance for homeowners, businesses, apartment communities, and managed properties throughout Manassas, Northern Virginia, Washington, DC, and nearby Maryland. Property teams can provide unit counts, equipment information, access requirements, and timing goals so recurring work can be discussed clearly." },
     ],
     relatedServices: ["hvac-maintenance", "commercial-hvac", "apartment-hvac"],
+    internalLinks: [
+      { title: "HVAC maintenance service", description: "Discuss equipment condition, seasonal timing, and the appropriate scope for your property.", href: "/services/hvac-maintenance" },
+      { title: "Manassas heating and cooling service", description: "Arrange maintenance or describe an active repair problem in Manassas.", href: "/service-areas/manassas-va" }
+    ],
   },
   {
     slug: "heat-pump-vs-furnace-northern-virginia",
